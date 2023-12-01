@@ -1,0 +1,106 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+interface Props {
+	title: string;
+}
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Colorado FC</title>
+    <ViewTransitions />
+	</head>
+	<body>
+		<Navbar />
+		<slot />
+    <Footer />
+	</body>
+</html>
+<style is:global>
+
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Edu+VIC+WA+NT+Beginner:wght@500&family=Lato:wght@300&family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+
+
+	body {
+		background-color: black;
+	}
+
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+	}
+
+  .text-secondary-white {
+    --tw-text-opacity: 1;
+    color: rgb(199 199 199 / var(--tw-text-opacity));
+}
+
+	.primary-navigation {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  --gap: 2em;
+  position: fixed;
+  inset: 0 0 0 80%;
+  z-index: 3000;
+  flex-direction: column;
+  padding: min(30vh, 7rem) 2em;
+  transform: translateX(100%);
+  transition: transform 400ms ease;
+  align-items: flex-end;
+}
+
+
+@media (max-width: 65em) {
+  .primary-navigation {
+    inset: 0 0 0 30%;
+  }
+
+}
+
+.abrir {
+  transform: translateX(0%);
+}
+
+.appear {
+  transform: translateY(-15px);
+  opacity: 1;
+}
+
+.disappear {
+  transform: translateY(0px);
+  opacity: 0;
+  transition: all 0s;
+}
+
+.primary-navigation > li:hover {
+  transition: opacity .5s;
+  opacity: .6;
+}
+
+
+.openButton1 {
+  transform: translateY(9px) rotate(47deg);
+}
+
+.openButton2 {
+  transform: translateY(-9px) rotate(-47deg);
+}
+
+
+</style>

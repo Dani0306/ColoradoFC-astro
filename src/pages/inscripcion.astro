@@ -1,0 +1,48 @@
+---
+import InscriptionSection from "../components/InscriptionSection.astro";
+import { TypingText, MotionDiv, MotionImage } from "../components/MotionComponents";
+import StartItem from "../components/StartItem.astro";
+import Layout from "../layouts/Layout.astro";
+import { getStartedItems, inscriptionItems } from "../utils/constants";
+---
+
+<Layout title="Inscripción">
+
+
+
+    <section class="w-full min-h-[92vh] relative overflow-hidden">
+        <div class="absolute top-[20%] lg:right-0 right-[20%] w-[50%] h-[30%] inset-[40%] gradient-01" />
+        <TypingText styles="mt-12 lg:mt-20 text-center" title="| Proceso de Inscripción" client:load/>
+        <MotionDiv styles="flex flex-col lg:flex-row items-center justify-center w-full h-max lg:mt-28" client:load>
+            <MotionImage direction="left" img="/jugador.webp" styles="w-[80%] h-[900px] object-contain lg:w-[500px] lg:h-[700px]" client:load/>
+            <div class="w-full lg:w-[35%] h-max flex flex-col mt-10 mx-20 lg:self-start">
+                <h1 class="text-center text-white font-semibold text-4xl lg:text-5xl lg:font-bold my-6 lg:self-start mb-10">Forma parte del equipo</h1>
+                {
+                    getStartedItems.map((item, index) => (
+                        <StartItem number={index + 1} content={item.content} />
+                    ))
+                }
+            </div>
+        </MotionDiv>
+        </section>
+        <h1 class="mt-48 mb-12 text-center font-bold text-[30px] text-white lg:text-[70px] px-4 lg:px-0">¿Por qué Entrenar en Colorado FC?</h1>
+        {
+            inscriptionItems.map((item, index) => (
+                <InscriptionSection {...item} reverse={index === 1 || index === 3} img={item.img}/>
+            ))
+        }        
+
+</Layout>
+
+
+<style>
+    .gradient-01 {
+      background-image: linear-gradient(
+        270deg,
+        red 0%,
+        gold 70%
+      );
+      filter: blur(125px);
+      opacity: 0.3;
+    }
+    </style>

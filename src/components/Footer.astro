@@ -1,0 +1,65 @@
+---
+import { socials } from "../utils/constants";
+import { About } from "../icons/index"
+import { MotionDiv } from "./MotionComponents";
+---
+
+<footer class="w-full h-max relative overflow-x-hidden flex items-center justify-between flex-col mt-[50px] z-20 p-6 md:p-8 overflow-hidden">
+    <div class="footer-gradient" />
+        <MotionDiv styles="w-full h-max flex items-start md:items-center justify-between flex-col md:flex-row" client:load>
+            <h1 class="font-bold text-white text-4xl my-3">!Síguenos!</h1>
+            <button class="w-[240px] h-[45px] flex items-center justify-center bg-white rounded-lg my-3 more-info">
+                <About black={false}/>
+                <span>Mas información</span>
+            </button>
+        </MotionDiv>
+        <MotionDiv styles="w-full h-max flex flex-col" client:load>
+            <div class="my-[50px] h-[2px] bg-white opacity-10" />
+            <div class="w-full h-max flex items-center justify-between flex-wrap gap-4">
+                <h4 class="font-normal text-[24px] text-white">
+                    @coloradofutbolclub
+                  </h4>
+                  <p class="font-normal text-[14px] text-white opacity-50">
+                    Copyright © 2021 - 2022 COLORADO FC. All rights reserved.
+                  </p>
+
+                  <div class="flex gap-4 relative items-center justify-center">
+                    {socials.map((social) => (
+                      <a href={social.link}>
+                        <img
+                        title={social.name}
+                        src={social.url}
+                        alt={social.name}
+                        class={`w-[24px] h-[24px] ${social.name === "tiktok" && "w-[35px] h-[35px]" } object-cover cursor-pointer`}
+                      />
+                      </a>
+                    ))}
+                  </div>
+            </div>
+          </MotionDiv>
+</footer>
+
+
+<style>
+.footer-gradient {
+    position: absolute;
+    width: 500px;
+    height: 60px;
+    left: 37%;
+    bottom: 0;
+    background: linear-gradient(270deg, gold, red);
+    filter: blur(150px);
+    z-index: -10;
+  }
+
+  .more-info {
+    background-image: linear-gradient(270deg, red 0%, #BB9400 100%); /* Use a darker gold color */
+    color: white; /* Text color for the button */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a text shadow to make it more visible */
+    border: none; /* Remove the button border */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+  }
+
+</style>

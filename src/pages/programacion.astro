@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { MotionP, MotionDiv, MotionImage, TypingText } from "../components/MotionComponents";
+import { programacionText } from "../utils/constants"
+---
+
+
+<Layout title="Programación">
+    <section class="w-full min-h-[92vh] py-20 overflow-hidden">
+        <h1 class="text-white text-3xl lg:text-5xl max-w-[90%] lg:max-w-[80%] text-center font-bold mx-auto">Futbolistas, ¡preparen sus agendas! Programación de partidos por venir.</h1>
+        <div class="w-full min-h-[92vh] py-10 lg:py-16 relative overflow-x-hidden">
+                <div class="absolute top-[20%] lg:left-0 left-[20%] w-[50%] h-[30%] inset-0 gradient-01" />
+            <div class="mx-auto w-full 2xl:w-[80%] xl:px-16 h-full flex flex-col lg:flex-row px-6 sm:px-16 lg:justify-between">
+                <div class="w-full lg:w-[50%] h-full flex flex-col-reverse lg:flex-col items-center lg:items-start justify-between lg:py-16">
+                    <TypingText reduced title="|  Programacion 21 y 22 de Octubre" client:load/>
+                    <MotionP content={programacionText} styles="hidden lg:block mt-[40px] font-normal text-base lg:text-xl text-justify text-white" client:load></MotionP>
+                </div>
+                <div class="w-full lg:w-[40%] flex items-center justify-center">
+                    <MotionImage img="/programacion.webp" styles="w-[600px] h-[500px] object-contain" client:load>
+                </div>
+                <MotionP content={programacionText} styles="lg:hidden w-[90%] font-normal text-base lg:text-xl text-justify text-white" client:load></MotionP>
+            </div>
+
+
+        </div>
+    </section>
+</Layout>
+
+
+
+<style>
+
+    *{
+        overflow: hidden;
+    }
+
+    .gradient-01 {
+      background-image: linear-gradient(
+        270deg,
+        red 0%,
+        gold 70%
+      );
+      filter: blur(125px);
+      opacity: 0.3;
+    }
+    </style>

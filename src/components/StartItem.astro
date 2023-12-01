@@ -1,0 +1,14 @@
+---
+const { number, content } = Astro.props;
+
+---
+<div class="w-[85%] lg:w-full mx-auto h-max flex items-center justify-between my-7">
+    <div class="w-[15%] h-[50px] rounded-xl bg-slate-400 flex items-center justify-center">
+        <strong>{number}</strong>
+    </div>
+    <div class="w-[80%]">
+        <p class="text-white text-base lg:text-2xl">
+           {content}
+        </p>
+    </div>
+</div>
