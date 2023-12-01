@@ -11,7 +11,7 @@ const { title, content, img, reverse = false } = Astro.props;
                 <TypingText reduced title={title} client:load/>
                 <MotionP content={content} styles="mt-[40px] font-normal text-base lg:text-xl text-justify text-white" client:load>
         </div>
-        <div class={`h-max w-full lg:w-[40%] ${reverse ? "lg:justify-start" : "lg:justify-end"} flex items-center`}>
+        <div class={`h-max w-full lg:w-[40%] ${reverse ? "lg:justify-start" : "lg:justify-end"} flex justify-center items-center`}>
             <MotionImage direction={reverse ? "left" : "right"} img={img} styles="h-[250px] lg:h-[350px] lg:w-[400px] w-[300px] my-20 lg:my-0 object-cover rounded-xl" client:load>
         </div>
     </div>
