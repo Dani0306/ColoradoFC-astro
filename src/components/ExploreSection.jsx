@@ -16,7 +16,7 @@ const ExploreSection = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                className={`2xl:max-w-[1280px] w-[90%] mx-auto flex flex-col pt-[30px]`}
+                className={`2xl:max-w-[1280px] w-[90%] mx-auto flex flex-col pt-[10px]`}
               >
                 <div className="mt-[60px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
                   {exploreCategories.map((category, index) => (
