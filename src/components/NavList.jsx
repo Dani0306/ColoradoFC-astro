@@ -28,7 +28,7 @@ const NavList = () => {
     <li className={`w-full h-[55px] flex items-center justify-start text-white font-normal ${showNavbar ? "appear" : "disappear"} transition-all duration-[1.4s]`}>
         <Search />
 
-        <a href="#explorar">Explorar</a>
+        <a href="/explorar/">Explorar</a>
     </li>
     <li className={`w-full h-[60px] lg:h-[55px] flex items-center justify-start text-white font-normal ${showNavbar ? "appear" : "disappear"} transition-all duration-[1.7s]`}>
         <Football />

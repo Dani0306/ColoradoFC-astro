@@ -1,0 +1,18 @@
+---
+import ExploreSection from "../components/ExploreSection";
+import { TypingText } from "../components/MotionComponents";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+
+<Layout title="Explorar">
+    <section class="flex flex-col">
+        <div class="w-full h-max flex flex-col items-center justify-center mt-[150px]">
+            <h1 class="text-[30px] md:text-[50px] lg:text-[60px] xl:text-[85px] font-bold text-white ">Vive la Experiencia</h1>
+            <TypingText styles="mt-6" reduced title="| Colorado FC" client:load/>
+        </div>
+        <ExploreSection client:load/>
+    </section>
+</Layout>
+

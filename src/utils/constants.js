@@ -51,6 +51,8 @@ export const getStartedItems = [
     }
 ]
 
+
+
 export const inscriptionItems = [
     {
         title: "| Excelencia en la formación", 
@@ -74,8 +76,46 @@ export const inscriptionItems = [
     }
 ]
 
+
+
 export const programacionText = `te presentamos las fechas, horarios, lugares y categorías de cada juego. 
 Mantente al tanto de la acción en el campo y no te pierdas ni un solo momento del deporte rey. 
 ¡Ven y apoya a nuestros equipos en cada uno de sus desafíos! Actualizamos constantemente 
 nuestra programación para que no te pierdas ninguna jugada, así que asegúrate de estar al
 tanto de las últimas actualizaciones aquí mismo. ¡Prepárate para el fútbol en su máximo esplendor!`
+
+
+
+
+export const exploreCategories = [
+    { 
+      id: "category-1",
+      imgUrl: '/equipo.webp',
+      title: 'Eventos y Torneos',
+      text: "En Colorado FC no solo disfrutas de la experiencia de formación, sino también de la mejor competitividad en torneos como Asobdim, Liga Antioqueña y muchos otros mas, que te harán despertar tu gen mas competitivo y pondrán a prueba tus habilidades como jugador."
+    },
+    { 
+      id: "category-2",
+      imgUrl: '/instalaciones.webp',
+      title: 'Instalaciones y Ubicación',
+      text: "Colorado FC se ubica en el Polideportivo Tulio Ospina, en el municipio de Bello, alli podras encontrar nuestros lugares de entrenamiento en las mejores canchas sinteticas del municipio."
+    },
+    { 
+      id: "category-3",
+      imgUrl: '/formacion.webp',
+      title: 'Programas de Formación',
+      text: "Sumérgete en nuestros programas de formación diseñados para desarrollar habilidades técnicas, tácticas y físicas en jugadores desde los 4 a los 14 años de edad."
+    },
+    { 
+      id: "category-4",
+      imgUrl: '/entrenadores.webp',
+      title: 'Nuestro Equipo de Entrenadores',
+      text: "Conoce nuestro preparado equipo de entrenadores en Colorado FC. Son apasionados, dedicados y expertos en el desarrollo de jugadores. En cada entrenamiento y partido, guían a nuestros futbolistas hacia el éxito"
+    },
+    { 
+      id: "category-5",
+      imgUrl: '/valores.webp',
+      title: 'Valores y Filosofía',
+      text: "Explora Colorado FC y conoce nuestros valores asociados al juego limpio, la honestidad y competitividad que nos han llevado a lo mas alto."
+    },
+  ];
