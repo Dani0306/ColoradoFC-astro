@@ -13,7 +13,7 @@ import { AboutUsText, MisionText, HistoryText } from "../utils/constants";
 
             <div class="mx-auto w-full 2xl:w-[80%] xl:px-16 h-full flex flex-col lg:flex-row px-6 sm:px-16 lg:justify-between">
                 <div class="w-full lg:w-[50%] h-full flex flex-col items-center lg:items-start justify-between lg:py-16">
-                    <TypingText title="| ¿Quienes somos?" client:load/>
+                    <TypingText reduced title="| ¿Quienes somos?" client:load/>
                     <MotionP content={AboutUsText} styles="mt-[20px] font-normal text-base lg:text-xl text-justify text-white" client:load>
                 </div>
                 <div class="w-full lg:w-[40%] flex items-center justify-center">
@@ -32,7 +32,7 @@ import { AboutUsText, MisionText, HistoryText } from "../utils/constants";
 
             <div class="mx-auto w-full 2xl:w-[80%] xl:px-16 h-full flex flex-col lg:flex-row px-6 sm:px-16 lg:justify-between">
                 <div class="w-full lg:w-[50%] h-full flex flex-col items-center lg:items-start justify-between lg:py-16">
-                    <TypingText title="| Nuestra misión" client:load/>
+                    <TypingText reduced title="| Nuestra misión" client:load/>
                     <MotionP content={MisionText} styles="mt-[20px] font-normal text-base lg:text-xl text-justify text-white" client:load>
                 </div>
                 <div class="w-full lg:w-[40%] flex items-center justify-center">
@@ -46,11 +46,9 @@ import { AboutUsText, MisionText, HistoryText } from "../utils/constants";
     <section class="w-full h-max py-12 lg:py-20">
         <div class="w-full h-max py-10 lg:py-16 relative overflow-x-hidden">
                 <div class="absolute top-[20%] lg:left-0 left-[20%] w-[50%] h-[30%] inset-0 gradient-01" />
-
-
             <div class="mx-auto w-full 2xl:w-[80%] xl:px-16 h-full flex flex-col lg:flex-row px-6 sm:px-16 lg:justify-between">
                 <div class="w-full lg:w-[50%] h-full flex flex-col items-center lg:items-start justify-between lg:py-16">
-                    <TypingText title="| Haciendo historia" client:load/>
+                    <TypingText reduced title="| Haciendo historia" client:load/>
                     <MotionP content={HistoryText} styles="mt-[20px] font-normal text-base lg:text-xl text-justify text-white" client:load>
                 </div>
                 <div class="w-full lg:w-[40%] flex items-center justify-center">
