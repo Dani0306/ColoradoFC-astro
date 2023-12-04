@@ -1,0 +1,29 @@
+---
+const { img, content, title, index } = Astro.props;
+import { MotionDiv } from "./MotionComponents";
+---
+
+<MotionDiv direction={index === 0 || index === 2 ? "left" : "right"} client:load styles="w-[90%] h-[400px] max-w-[600px]  lg:w-[600px] lg:h-[600px] flex flex-col mx-auto rounded-xl my-10 lg:my-0">
+        <div class="w-full h-[65%]">
+            <img src={img} class="w-full h-full object-cover rounded-t-xl aspect-video" alt="imagen">
+        </div>
+        <div class="flex flex-col p-4 lg:p-6 gradient-background rounded-b-xl">
+            <h2 class="text-xl font-semibold mb-2">{title}</h2>
+            <p class="text-base mt-2">{content}</p>
+        </div>
+</MotionDiv>
+
+
+<style>
+.gradient-background {
+  /* Yellow to Strong Orange Gradient */
+  background: linear-gradient(45deg, #FFD700, #FF5733); /* Adjust colors as needed */
+
+  /* For older browsers */
+  background: -webkit-linear-gradient(45deg, #FFD700, #FF5733);
+  background: -moz-linear-gradient(45deg, #FFD700, #FF5733);
+  background: -o-linear-gradient(45deg, #FFD700, #FF5733);
+}
+
+
+</style>

@@ -25,7 +25,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick, text }) =>
     ) : (
       <div className="h-[75%] lg:h-[35%] justify-center lg:justify-end lg:pb-10 absolute bottom-0 flex w-full px-4 md:px-14 lg:px-8 flex-col bg-[rgba(0,0,0,0.55)] rounded-b-[24px]">
         <p className="font-normal text-[12px] sm:text-[16px] leading-[15px] sm:leading-[20.16px] text-white text-start">
-          {text}
+            {text}
         </p>
         <h2 className="mt-[24px] leading-[25px] lg:leading-[35px] font-semibold sm:text-[32px] text-[22px] text-white">
           {title}

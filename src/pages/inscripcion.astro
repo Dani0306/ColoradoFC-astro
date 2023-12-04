@@ -7,16 +7,13 @@ import { getStartedItems, inscriptionItems } from "../utils/constants";
 ---
 
 <Layout title="Inscripción">
-
-
-
     <section class="w-full min-h-[92vh] relative overflow-hidden">
         <div class="absolute top-[20%] lg:right-0 right-[20%] w-[50%] h-[30%] inset-[40%] gradient-01" />
-        <TypingText styles="mt-40 mb-20 lg:mb-0 text-center" title="| Proceso de Inscripción" client:load/>
+        <h1 class="text-[30px] w-max mx-auto mt-[150px] md:text-[50px] lg:text-[60px] xl:text-[85px] font-bold text-white ">Proceso de inscripción</h1>
         <MotionDiv styles="flex flex-col lg:flex-row items-center justify-center w-full h-max lg:mt-28" client:load>
             <MotionImage direction="left" img="/jugador.webp" styles="w-[80%] h-[600px] object-contain lg:w-[500px] lg:h-[700px]" client:load/>
             <div class="w-full lg:w-[35%] h-max flex flex-col mt-10 mx-20 lg:self-start">
-                <h1 class="text-center text-white font-semibold text-4xl lg:text-5xl lg:font-bold my-6 lg:self-start mb-10">Forma parte del equipo</h1>
+                <TypingText reduced styles="my-10" title="| Forma parte del equipo" client:load/>
                 {
                     getStartedItems.map((item, index) => (
                         <StartItem number={index + 1} content={item.content} />
@@ -28,13 +25,11 @@ import { getStartedItems, inscriptionItems } from "../utils/constants";
         <h1 class="mt-48 mb-12 text-center font-bold text-[30px] text-white lg:text-[70px] px-4 lg:px-0">¿Por qué Entrenar en Colorado FC?</h1>
         {
             inscriptionItems.map((item, index) => (
-                <InscriptionSection {...item} reverse={index === 1 || index === 3} img={item.img}/>
+                <InscriptionSection {...item} reverse={index === 1 || index === 3}/>
             ))
         }        
 
 </Layout>
-
-
 <style>
     .gradient-01 {
       background-image: linear-gradient(

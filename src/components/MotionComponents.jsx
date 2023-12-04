@@ -44,7 +44,7 @@ export const MotionP = ({ content, styles }) => {
     variants={staggerContainer}
     initial="hidden"
     whileInView="show"
-    viewport={{ once: false, amount: 0.25 }}  className='flex items-center justify-center'>
+    viewport={{ once: false, amount: 0.25 }}  className='flex items-center justify-center text-secondary-white'>
       <motion.p variants={fadeIn('up', 'tween', 0.2, 1)} className={`${styles}`}>
           {content}
       </motion.p>
@@ -53,14 +53,26 @@ export const MotionP = ({ content, styles }) => {
 }
 
 
-export const MotionDiv = ({ children, styles }) => {
+export const MotionDiv = ({ children, styles, direction = "up" }) => {
+
+  const decideAnimaiton = () => {
+    switch (direction) {
+      case "up": 
+        return fadeIn('up', 'tween', 0.2, 1)
+      case "left": 
+        return slideIn("left", "tween", 0.2, 1)
+      case "right": 
+        return slideIn("right", "tween", 0.2, 1)
+    }
+  }
+
   return (
     <motion.div 
     variants={staggerContainer}
     initial="hidden"
     whileInView="show"
     viewport={{ once: false, amount: 0.25 }}  className='w-full flex items-center justify-center'>
-      <motion.div variants={fadeIn('up', 'tween', 0.2, 1)} className={`${styles}`}>
+      <motion.div variants={decideAnimaiton()} className={`${styles}`}>
         {children}
       </motion.div>
     </motion.div>

@@ -119,3 +119,27 @@ export const exploreCategories = [
       text: "Explora Colorado FC y conoce nuestros valores asociados al juego limpio, la honestidad y competitividad que nos han llevado a lo mas alto."
     },
   ];
+
+
+  export const exploreSectionItems = [
+        {
+            title: "Entrenamiento de resistencia",
+            img: "/resistencia.webp", 
+            content: "Sesiones diseñadas para mejorar la resistencia cardiovascular y física de los jugadores a través de ejercicios específicos y entrenamientos de larga duración."
+        },
+        {
+            title: "Entrenamiento de habilidades técnicas",
+            img: "/tecnica.webp", 
+            content: "Enfoque práctico en el desarrollo y perfeccionamiento de las habilidades técnicas fundamentales, incluyendo el control del balón, pases precisos y técnica de tiro."
+        },
+        {
+            title: "Entrenamiento de táctica de juego",
+            img: "/tacticas.webp", 
+            content: "Simulaciones y prácticas enfocadas en tácticas de juego, estrategias de equipo y comprensión del juego para mejorar la toma de decisiones durante el partido."
+        },
+        {
+            title: "Entrenamiento de velocidad y agilidad",
+            img: "/arqueros.webp", 
+            content: "Programas de entrenamiento intensivos diseñados para mejorar la velocidad, la agilidad y la capacidad de reacción rápida en situaciones de juego."
+        }        
+  ]
