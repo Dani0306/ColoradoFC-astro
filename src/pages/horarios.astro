@@ -1,0 +1,34 @@
+---
+import ExploreSection from "../components/ExploreSection";
+import ExploreSectionCard from "../components/ExploreSectionCard.astro";
+import { TypingText } from "../components/MotionComponents";
+import Layout from "../layouts/Layout.astro";
+import { exploreSectionItems } from "../utils/constants";
+---
+
+
+<Layout title="Explorar">
+    <section class="flex flex-col relative min-h-[90vh]">
+        <div class="w-full h-max flex flex-col items-center justify-center mt-[150px]">
+            <div class="absolute top-[20%] lg:left-0 left-[20%] w-[50%] h-[30%] inset-0 gradient-01" />
+            <h1 class="text-[30px] md:text-[50px] lg:text-[60px] xl:text-[85px] font-bold text-white ">Conoce Nuestros</h1>
+            <TypingText styles="mt-6" reduced title="| Horarios de entrenamiento" client:load/>
+        </div>
+
+
+
+    </section>
+</Layout>
+
+
+<style>
+    .gradient-01 {
+  background-image: linear-gradient(
+    270deg,
+    red 0%,
+    gold 70%
+  );
+  filter: blur(125px);
+  opacity: 0.3;
+}
+</style>

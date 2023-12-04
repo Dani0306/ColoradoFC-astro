@@ -33,7 +33,7 @@ const NavList = () => {
     <li className={`w-full h-[60px] lg:h-[55px] flex items-center justify-start text-white font-normal ${showNavbar ? "appear" : "disappear"} transition-all duration-[1.7s]`}>
         <Football />
 
-        <a href="#entrenamientos">Horarios de Entrenamiento</a>
+        <a href="/horarios">Horarios de Entrenamiento</a>
     </li>
     <li className={`w-full h-[55px] flex items-center justify-start text-white font-normal ${showNavbar ? "appear" : "disappear"} transition-all duration-[2s]`}>
         <Award />
